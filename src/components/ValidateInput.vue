@@ -33,8 +33,10 @@ export default defineComponent({
   setup (props, context) {
     const inputRef = reactive({
       val: computed({
+        // 计算属性双向绑定
         get: () => props.modelValue || '',
         set: val => {
+          // 修改的值发送至父组件
           context.emit('update:modelValue', val)
         }
       }),

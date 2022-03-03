@@ -21,6 +21,7 @@
      :rules="emailRules"
      v-model="emailVal"
      />
+     {{emailVal}}
     <!-- 具名插槽内容 -->
     <template #submit>
       <button class="btn btn-primary btn-large">确认</button>
